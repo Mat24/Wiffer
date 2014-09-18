@@ -40,16 +40,14 @@ ActiveRecord::Schema.define(version: 20140918215322) do
   add_index "localizations", ["red_id"], name: "index_localizations_on_red_id"
 
   create_table "pass_types", force: true do |t|
-    t.integer  "red_id"
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pass_types", ["red_id"], name: "index_pass_types_on_red_id"
-
   create_table "reds", force: true do |t|
     t.integer  "isp_id"
+    t.integer  "pass_type_id"
     t.string   "password"
     t.string   "wps_pin"
     t.datetime "created_at"
@@ -57,6 +55,7 @@ ActiveRecord::Schema.define(version: 20140918215322) do
   end
 
   add_index "reds", ["isp_id"], name: "index_reds_on_isp_id"
+  add_index "reds", ["pass_type_id"], name: "index_reds_on_pass_type_id"
 
   create_table "routers", force: true do |t|
     t.integer  "red_id"

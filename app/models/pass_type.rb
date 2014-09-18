@@ -1,3 +1,3 @@
 class PassType < ActiveRecord::Base
-  belongs_to :red
+  has_many :red
 end
