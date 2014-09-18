@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  red_id: 
+  coord_x: 9.99
+  coord_y: 9.99
+
+two:
+  red_id: 
+  coord_x: 9.99
+  coord_y: 9.99

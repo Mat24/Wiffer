@@ -1,0 +1,29 @@
+<h1>Listing reds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isp</th>
+      <th>Password</th>
+      <th>Wps pin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reds.each do |red| %>
+      <tr>
+        <td><%= red.isp %></td>
+        <td><%= red.password %></td>
+        <td><%= red.wps_pin %></td>
+        <td><%= link_to 'Show', red %></td>
+        <td><%= link_to 'Edit', edit_red_path(red) %></td>
+        <td><%= link_to 'Destroy', red, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Red', new_red_path %>

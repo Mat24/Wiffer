@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  red_id: 
+  bssid: MyString
+  essid: MyString
+  comment: MyString
+  public_ip: MyString
+  port: MyString
+
+two:
+  red_id: 
+  bssid: MyString
+  essid: MyString
+  comment: MyString
+  public_ip: MyString
+  port: MyString

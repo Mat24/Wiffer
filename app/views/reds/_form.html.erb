@@ -1,0 +1,29 @@
+<%= form_for(@red) do |f| %>
+  <% if @red.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@red.errors.count, "error") %> prohibited this red from being saved:</h2>
+
+      <ul>
+      <% @red.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :isp_id %><br>
+    <%= f.text_field :isp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :wps_pin %><br>
+    <%= f.text_field :wps_pin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Red:</strong>
+  <%= @router.red %>
+</p>
+
+<p>
+  <strong>Bssid:</strong>
+  <%= @router.bssid %>
+</p>
+
+<p>
+  <strong>Essid:</strong>
+  <%= @router.essid %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @router.comment %>
+</p>
+
+<p>
+  <strong>Public ip:</strong>
+  <%= @router.public_ip %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @router.port %>
+</p>
+
+<%= link_to 'Edit', edit_router_path(@router) %> |
+<%= link_to 'Back', routers_path %>
